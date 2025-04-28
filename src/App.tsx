@@ -25,7 +25,7 @@ function App() {
 
   // 从环境变量读取后端 URL，如果未设置，则使用默认的本地地址
   const backendUrl =
-    process.env.REACT_APP_BACKEND_URL || "http://localhost:3001/chat";
+    import.meta.env.VITE_BACKEND_URL || "http://localhost:3001/chat"; // 新代码 (Vite 方式)
 
   // --- Effect Hook ---
   // 此 useEffect 负责在 `messages` 数组或 `currentResponse` 字符串更新时，自动将聊天窗口滚动到底部。
